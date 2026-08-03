@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Aaron Grusi — Customer Success Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Roboto:wght@300;400;500&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1F1A;
+  --edge:#24443C;
+  --paper:#EDEFEC;
+  --amber:#D8973C;
+  --sage:#93AEA2;
+  --slate:#5A6B64;
+
+  --display:'Instrument Serif',Georgia,serif;
+  --body:'Roboto',-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:'Roboto Mono',ui-monospace,monospace;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);font-weight:300;font-size:16px;line-height:1.7;
+  background:var(--ink);color:var(--paper);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:880px;margin:0 auto;padding:0 32px}
+
+/* nav */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(14,31,26,.85);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--edge);
+}
+.nav-in{max-width:880px;margin:0 auto;padding:16px 32px;display:flex;justify-content:space-between;align-items:baseline;gap:24px}
+.nav-name{font-family:var(--display);font-size:20px;color:var(--paper);text-decoration:none}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--sage);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent;
+  transition:color .18s,border-color .18s;
+}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--amber);border-color:var(--amber)}
+
+/* hero */
+.hero{padding:120px 0 84px;position:relative;overflow:hidden}
+.hero::after{
+  content:"";position:absolute;right:-180px;top:-140px;width:560px;height:560px;
+  background:radial-gradient(circle,rgba(216,151,60,.13),transparent 65%);pointer-events:none;
+}
+.eyebrow{
+  font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:28px;
+}
+.hero h1{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(44px,7vw,86px);line-height:1.02;letter-spacing:-.015em;
+  margin-bottom:32px;max-width:13ch;
+}
+.hero h1 em{font-style:italic;color:var(--sage)}
+.hero-lede{font-size:clamp(17px,2vw,20px);line-height:1.6;max-width:56ch;color:var(--paper);font-weight:300}
+.hero .wrap{position:relative;z-index:1}
+
+/* ---------- metrics: centered ---------- */
+.metrics-wrap{text-align:center;margin-bottom:116px}
+.metrics-head{
+  font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--slate);margin-bottom:22px;
+}
+.metrics{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--edge);border-left:1px solid var(--edge);
+}
+.metric{
+  border-right:1px solid var(--edge);border-bottom:1px solid var(--edge);
+  padding:28px 16px;text-align:center;
+}
+.metric-n{
+  font-family:var(--mono);font-weight:500;font-size:clamp(26px,3.2vw,36px);
+  line-height:1.05;color:var(--amber);letter-spacing:-.02em;display:block;margin-bottom:12px;
+}
+.metric-l{font-size:12.5px;line-height:1.5;color:var(--sage)}
+.metrics-note{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  color:var(--slate);margin-top:18px;line-height:1.7;
+}
+
+/* section headings */
+.sec-h{
+  font-family:var(--display);font-weight:400;font-size:clamp(30px,4.2vw,46px);
+  line-height:1.12;letter-spacing:-.01em;margin-bottom:36px;max-width:18ch;
+}
+
+/* principles */
+.band-dark{padding:100px 0}
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:44px 60px;margin-top:8px}
+.pr-n{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--amber);display:block;margin-bottom:12px}
+.pr h3{font-family:var(--body);font-weight:400;font-size:18px;line-height:1.4;margin-bottom:10px;color:var(--paper)}
+.pr p{font-size:14.5px;line-height:1.68;color:var(--sage)}
+
+/* ---------- about ---------- */
+.band-light{background:var(--paper);color:var(--ink);padding:100px 0}
+.about{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start}
+.about-photo{
+  width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 18%;
+  border-radius:2px;display:block;
+}
+.about-body .sec-h{color:var(--ink);margin-bottom:24px}
+.about-body p{color:#33443E;font-size:16.5px;line-height:1.78;margin-bottom:20px}
+.about-body p:last-child{margin-bottom:0}
+
+/* contact */
+.contact{border-top:1px solid var(--edge);padding:80px 0 90px}
+.contact h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,5vw,56px);line-height:1.05;margin-bottom:34px}
+.links{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;padding:14px 24px;border:1px solid var(--edge);color:var(--paper);
+  transition:border-color .18s,color .18s;
+}
+.btn:hover,.btn:focus-visible{border-color:var(--amber);color:var(--amber)}
+
+.foot{
+  border-top:1px solid var(--edge);padding:26px 0 44px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);
+}
+
+/* motion */
+.rise{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rise.in{opacity:1;transform:none}
+
+a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+
+@media (max-width:900px){
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .principles{grid-template-columns:1fr;gap:32px}
+  .about{grid-template-columns:1fr;gap:32px}
+  .about-photo{max-width:220px}
+}
+@media (max-width:600px){
+  .wrap,.nav-in{padding-left:22px;padding-right:22px}
+  .nav-links{gap:16px}
+  .nav-links a{font-size:10px;letter-spacing:.1em}
+  .hero{padding:76px 0 60px}
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .metrics-wrap{margin-bottom:76px}
+  .band-light,.band-dark{padding:68px 0}
+  .links{flex-direction:column;align-items:stretch}
+  .btn{width:100%;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rise{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a href="/" class="nav-name">Aaron Grusi</a>
+    <ul class="nav-links">
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Customer Success Leader</p>
+
+    <h1>I carried the book <em>and</em> built the systems behind it.</h1>
+
+    <p class="hero-lede">
+      Ten years in SaaS Customer Success, most of it doing both jobs at once: holding a
+      valuable book of business and building the operations for the team.
+    </p>
+  </div>
+</header>
+
+<!-- ============ METRICS ============ -->
+<section class="wrap">
+  <div class="metrics-wrap">
+    <p class="metrics-head">Selected metrics</p>
+    <div class="metrics rise">
+      <div class="metric">
+        <span class="metric-n">95%</span>
+        <span class="metric-l">Logo renewal rate</span>
+      </div>
+      <div class="metric">
+        <span class="metric-n">108%</span>
+        <span class="metric-l">Net revenue retention</span>
+      </div>
+      <div class="metric">
+        <span class="metric-n">$3M</span>
+        <span class="metric-l">ARR, largest single account</span>
+      </div>
+      <div class="metric">
+        <span class="metric-n">3&times;</span>
+        <span class="metric-l">Increase in SMB upsell revenue</span>
+      </div>
+    </div>
+    <p class="metrics-note">
+      CBT Nuggets, Senior CSM, 2019&ndash;2023 &nbsp;·&nbsp; SMB upsell growth 2020&ndash;2024
+    </p>
+  </div>
+</section>
+
+<!-- ============ PRINCIPLES ============ -->
+<section class="band-dark" id="approach">
+  <div class="wrap">
+    <h2 class="sec-h">How I tend to work</h2>
+    <div class="principles rise">
+
+      <div class="pr">
+        <span class="pr-n">01</span>
+        <h3>You rarely get a second chance to onboard.</h3>
+        <p>
+          Nailing that first stretch sets the trajectory for everything after it. Most
+          churn that shows up in month nine was decided in month one.
+        </p>
+      </div>
+
+      <div class="pr">
+        <span class="pr-n">02</span>
+        <h3>Not every metric matters to every customer.</h3>
+        <p>
+          Knowing what value actually means for a given account is the job. A health score
+          that treats them all the same is measuring your convenience, not their outcome.
+        </p>
+      </div>
+
+      <div class="pr">
+        <span class="pr-n">03</span>
+        <h3>Listen for what is not being said.</h3>
+        <p>
+          The unspoken need and the unasked question are usually where the expansion is,
+          and where the risk is. Neither one shows up in a ticket.
+        </p>
+      </div>
+
+      <div class="pr">
+        <span class="pr-n">04</span>
+        <h3>I would rather build it than wait for it.</h3>
+        <p>
+          When the data I needed did not exist, I wrote the collector myself. That instinct
+          has occasionally put me outside my job description, which I have never regretted.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="band-light" id="about">
+  <div class="wrap">
+    <div class="about rise">
+      <img src="aaron.jpg" alt="Aaron Grusi" class="about-photo">
+      <div class="about-body">
+        <h2 class="sec-h">About</h2>
+        <p>
+          Former coach turned Customer Success leader. I grew up with the industry as it
+          took shape and found my calling in delivering meaningful moments for my clients
+          and driving revenue through product adoption.
+        </p>
+        <p>
+          I've had the privilege to operate in all CS roles: individual CSM carrying a book
+          of business, the team manager who was a player and coach, and a hybrid CS and
+          RevOps role. I'm a natural connector, the guy at the table who looks to get
+          everyone involved, and I enjoy the blend of people, relationships, strategy,
+          data, and innovation that Customer Success affords.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's talk.</h2>
+    <div class="links">
+      <a class="btn" href="mailto:howdy@atotheg.me">howdy@atotheg.me</a>
+      <a class="btn" href="#" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn" href="/resume.pdf" download>Download résumé</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <p class="foot">Aaron Grusi · Customer Success Leader</p>
+</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rise');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})
+  },{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+
+</body>
+</html>
