@@ -60,11 +60,11 @@ body{
 .hero h1{
   font-family:var(--display);font-weight:400;
   font-size:clamp(44px,7vw,86px);line-height:1.02;letter-spacing:-.015em;
-  margin-bottom:32px;max-width:13ch;
+  margin:0 auto 32px;max-width:15ch;
 }
 .hero h1 em{font-style:italic;color:var(--sage)}
-.hero-lede{font-size:clamp(17px,2vw,20px);line-height:1.6;max-width:56ch;color:var(--paper);font-weight:300}
-.hero .wrap{position:relative;z-index:1}
+.hero-lede{font-size:clamp(17px,2vw,20px);line-height:1.6;max-width:54ch;margin:0 auto;color:var(--paper);font-weight:300}
+.hero .wrap{position:relative;z-index:1;text-align:center}
 
 /* ---------- metrics: centered ---------- */
 .metrics-wrap{text-align:center;margin-bottom:116px}
@@ -105,7 +105,7 @@ body{
 
 /* ---------- about ---------- */
 .band-light{background:var(--paper);color:var(--ink);padding:100px 0}
-.about{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start}
+.about{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:center}
 .about-photo{
   width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 18%;
   border-radius:2px;display:block;
@@ -217,29 +217,33 @@ a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
 <!-- ============ PRINCIPLES ============ -->
 <section class="band-dark" id="approach">
   <div class="wrap">
-    <h2 class="sec-h">How I tend to work</h2>
+    <h2 class="sec-h">How I work</h2>
     <div class="principles rise">
 
       <div class="pr">
-        <span class="pr-n">01</span>
-        <h3>You rarely get a second chance to onboard.</h3>
+        <span class="pr-n">1</span>
+        <h3>Start strong.</h3>
         <p>
-          Nailing that first stretch sets the trajectory for everything after it. Most
-          churn that shows up in month nine was decided in month one.
+          While not fully indoctrinated into the Joey Coleman school of thought, I do
+          believe first impressions matter. Onboarding, adoption, and time to first value
+          are all critical motions that set the rest of the customer's experience up for
+          success.
         </p>
       </div>
 
       <div class="pr">
-        <span class="pr-n">02</span>
+        <span class="pr-n">2</span>
         <h3>Not every metric matters to every customer.</h3>
         <p>
           Knowing what value actually means for a given account is the job. A health score
           that treats them all the same is measuring your convenience, not their outcome.
+          In my last role I built dynamic, segmented health scoring models tied to what
+          each customer was actually trying to accomplish.
         </p>
       </div>
 
       <div class="pr">
-        <span class="pr-n">03</span>
+        <span class="pr-n">3</span>
         <h3>Listen for what is not being said.</h3>
         <p>
           The unspoken need and the unasked question are usually where the expansion is,
@@ -248,7 +252,7 @@ a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
       </div>
 
       <div class="pr">
-        <span class="pr-n">04</span>
+        <span class="pr-n">4</span>
         <h3>I would rather build it than wait for it.</h3>
         <p>
           When the data I needed did not exist, I wrote the collector myself. That instinct
@@ -289,8 +293,8 @@ a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
   <div class="wrap">
     <h2>Let's talk.</h2>
     <div class="links">
-      <a class="btn" href="mailto:hello@atotheg.me">hello@atotheg.me</a>
-      <a class="btn" href="https://www.linkedin.com/in/aarongrusi/" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn" href="mailto:howdy@atotheg.me">howdy@atotheg.me</a>
+      <a class="btn" href="#" rel="noopener noreferrer">LinkedIn</a>
       <a class="btn" href="/resume.pdf" download>Download résumé</a>
     </div>
   </div>
