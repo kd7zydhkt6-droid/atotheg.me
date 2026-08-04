@@ -15,10 +15,10 @@
       font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 300;
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.75;
       color: #111;
       background: #fff;
-      max-width: 560px;
+      max-width: 620px;
       margin: 0;                 /* left-aligned to the page, not centered */
       padding: 80px 24px 120px 64px;
     }
@@ -26,24 +26,15 @@
     h1 {
       font-size: 16px;
       font-weight: 400;
-      margin-bottom: 40px;
+      margin-bottom: 36px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    p {
+      color: #333;
+      margin-bottom: 18px;
+      max-width: 56ch;
     }
 
-    li {
-      margin-bottom: 12px;
-    }
-
-    /* Inactive sections: plain text, not clickable. */
-    .pending {
-      color: #999;
-    }
-
-    /* Active sections: swap the <span> for an <a> and it picks this up. */
     a {
       color: #111;
       text-decoration: underline;
@@ -53,9 +44,50 @@
     }
     a:hover { text-decoration-color: #111; }
 
+    /* ---------- photos ---------- */
+    .photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 36px 0;
+      max-width: 520px;
+    }
+    .photos img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+    }
+    /* ---------- interests ---------- */
+    .label {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 7px;
+      color: #333;
+    }
+    ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 5px;
+      height: 1px;
+      background: #bbb;
+    }
+
     .contact {
-      margin-top: 56px;
-      padding-top: 28px;
+      margin-top: 48px;
+      padding-top: 26px;
       border-top: 1px solid #e8e8e8;
       font-size: 14px;
     }
@@ -64,6 +96,7 @@
 
     @media (max-width: 600px) {
       body { padding: 56px 24px 80px 24px; }
+      .photos { gap: 8px; }
     }
   </style>
 </head>
@@ -71,26 +104,22 @@
 
   <h1>Aaron G.</h1>
 
+  <p>
+    PNW-based militantly optimistic bloke. Traveler, hiker, cyclist, camper, reader,
+    and subpar pickleball player often found with coffee.
+  </p>
+
+  <div class="photos">
+    <img src="photo-1.jpg" alt="Standing on a rock above a glacial lake, looking toward the Fitz Roy massif in Patagonia">
+    <img src="photo-2.jpg" alt="Sitting with my dog on the rim of Crater Lake at sunset">
+  </div>
+
+  <p class="label">Current interests</p>
   <ul>
-    <!-- To activate a section, replace its line with the commented version below it. -->
-
-    <li><span class="pending">About</span></li>
-    <!-- <li><a href="/about">About</a></li> -->
-
-    <li><span class="pending">Bookshelf</span></li>
-    <!-- <li><a href="/bookshelf">Bookshelf</a></li> -->
-
-    <li><span class="pending">Interests</span></li>
-    <!-- <li><a href="/interests">Interests</a></li> -->
-
-    <li><span class="pending">Pictures</span></li>
-    <!-- <li><a href="/pictures">Pictures</a></li> -->
-
-    <li><span class="pending">Things I think I think</span></li>
-    <!-- <li><a href="/thoughts">Things I think I think</a></li> -->
-
-    <li><span class="pending">Words</span></li>
-    <!-- <li><a href="/words">Words</a></li> -->
+    <li>Woodworking</li>
+    <li>Aprendiendo Espa&ntilde;ol</li>
+    <li>Jon Ronson's works</li>
+    <li>Trails in the Eastern Sierras</li>
   </ul>
 
   <p class="contact">
